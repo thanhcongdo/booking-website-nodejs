@@ -24,6 +24,58 @@ const router = express.Router();
 // router.get("/checkadmin/:id", verifyAdmin, (req,res,next)=>{
 //   res.send("hello admin, you are logged in and you can delete all accounts")
 // })
+/**
+ * @swagger
+ *  components:
+*   schemas:
+*     User:
+*       type: object
+*       required:
+*         - username
+*         - email
+*         - password
+*       properties:
+*         username:
+*           type: string
+*           description: The username of the user.
+*           uniqueItems: true
+*         email:
+*           type: string
+*           description: The email of the user.
+*           format: email
+*           uniqueItems: true
+*         country:
+*           type: string
+*           description: The country of the user.
+*         img:
+*           type: string
+*           description: The image URL of the user.
+*         city:
+*           type: string
+*           description: The city of the user.
+*         phone:
+*           type: string
+*           description: The phone number of the user.
+*         password:
+*           type: string
+*           description: The password of the user.
+*           format: password
+*         isAdmin:
+*           type: boolean
+*           description: The user's admin status.
+*           default: false
+*       example:
+*         username: johndoe
+*         email: johndoe@example.com
+*         country: USA
+*         img: https://example.com/johndoe.jpg
+*         city: New York
+*         phone: +1-555-1234567
+*         password: P@ssw0rd!
+*         isAdmin: false
+
+ */
+
 
 //UPDATE
 
