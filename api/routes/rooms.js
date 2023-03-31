@@ -10,7 +10,7 @@ import {
 import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
-
+// swagger chemas for rooms
 /**
  * @swagger
  * components:
@@ -63,6 +63,7 @@ const router = express.Router();
 *             unavailableDates: []
 
  */
+
 //CREATE
 
 /**
