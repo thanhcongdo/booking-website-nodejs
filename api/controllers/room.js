@@ -43,7 +43,7 @@ export const updateRoomAvailability = async (req, res, next) => {
         },
       }
     );
-    res.status(200).json("Room status has been updated.");
+    res.status(200).json("Đã cập nhật phòng.");
   } catch (err) {
     next(err);
   }
@@ -59,7 +59,7 @@ export const deleteRoom = async (req, res, next) => {
     } catch (err) {
       next(err);
     }
-    res.status(200).json("Room has been deleted.");
+    res.status(200).json("Phòng đã bị xoá.");
   } catch (err) {
     next(err);
   }

@@ -95,7 +95,6 @@ const router = express.Router();
 router.post("/:hotelid", verifyAdmin, createRoom);
 
 //UPDATE
-
 /**
  * @swagger
  * /api/rooms/{id}:
