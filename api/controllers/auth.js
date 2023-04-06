@@ -9,9 +9,8 @@ export const register = async (req, res, next) => {
         const hash = bcrypt.hashSync(req.body.password, salt);
 
         const newUser = new User({
-            username: req.body.username,
-            email: req.body.email,
-            password: hash
+            ...req.body,
+            password: hash,
         })
         await newUser.save()
         res.status(200).send("Tạo thành công user.")
@@ -44,7 +43,7 @@ export const login = async (req, res, next) => {
             httpOnly: true,
         })
             .status(200)
-            .json({ ...otherDetails })
+            .json({ ...otherDetails, isAdmin, token })
     } catch (err) {
         next(err)
     }
